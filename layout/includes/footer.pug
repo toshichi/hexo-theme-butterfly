@@ -9,9 +9,9 @@
       - copytext = `${nowYear}`
     .copyright
       | &copy;
-      span= copytext
+      span= copytext + ' '
       i(class='fa fa-terminal')
-      span= `${config.author}`
+      span= ` ${config.author}`
       span.footer-separator |
       span= 'Licensed under '
       i(class='fab fa-fw fa-creative-commons')
