@@ -2,11 +2,15 @@
   if theme.footer.owner.enable
     - var now = new Date()
     - var nowYear = now.getFullYear()
+    - var copytext
     if theme.footer.owner.since && theme.footer.owner.since != nowYear
-      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} <i class="fa fa-terminal"></i> ${config.author}`
+      copytext = `&copy;${theme.footer.owner.since} - ${nowYear}`
     else
-      .copyright!= `&copy;${nowYear} <i class="fa fa-terminal"></i> ${config.author}`
+      copytext = `&copy;${nowYear}`
     .copyright
+      span= copytext
+      i(class='fa fa-terminal')
+      span= `${config.author}`
       span.footer-separator |
       span= 'Licensed under '
       i(class='fab fa-fw fa-creative-commons')
@@ -15,7 +19,7 @@
     .framework-info
       span= 'Powered by '
       a(href='https://hexo.io')= 'Hexo'
-      span=' & '
+      span= ' & '
       a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
 
 
