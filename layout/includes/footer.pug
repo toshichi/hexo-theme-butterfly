@@ -6,16 +6,18 @@
       .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} <i class="fa fa-terminal"></i> ${config.author}`
     else
       .copyright!= `&copy;${nowYear} <i class="fa fa-terminal"></i> ${config.author}`
+    .copyright
+      span.footer-separator |
+      span= 'Licensed under '
+      i(class='fab fa-fw fa-creative-commons')
+      a(href='https://creativecommons.org/licenses/by-sa/4.0/')= 'BY-SA'
   if theme.footer.copyright
     .framework-info
       span= 'Powered by '
       a(href='https://hexo.io')= 'Hexo'
       span=' & '
       a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
-      span.footer-separator |
-      span= 'Licensed under '
-      i(class='fab fa-fw fa-creative-commons')
-      a(href='https://creativecommons.org/licenses/by-sa/4.0/')= 'BY-SA'
+
 
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`
