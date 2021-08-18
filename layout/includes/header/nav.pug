@@ -1,6 +1,7 @@
 nav#nav
   #blog_icon
-    img(src=url_for(theme.navicon) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="site icon")
+    a(href=url_for('/') title=config.title)
+      img(src=url_for(theme.navicon) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="site icon")
 
   span#blog_name
     a#site-name(href=url_for('/')) #[=config.title]
