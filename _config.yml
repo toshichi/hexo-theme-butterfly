@@ -82,8 +82,10 @@ katex:
 # Favicon（網站圖標）
 favicon: /img/favicon.png
 
-# Navbar icon
-navicon: /img/favicon.png
+# Site icon
+siteicon:
+  img: /img/favicon.png
+  effect: false
 
 # Avatar (頭像)
 avatar:

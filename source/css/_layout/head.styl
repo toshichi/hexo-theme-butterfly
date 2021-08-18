@@ -18,6 +18,21 @@
       padding: 0 .5rem
       width: 100%
 
+  .header-img
+    overflow: visible
+    margin: 0 auto
+    width: 128px
+    height: 128px
+    filter: drop-shadow(.1rem .1rem .1rem black) drop-shadow(0 0 2rem white);
+
+    img
+      height: 100%
+      transition: all .5s
+      object-fit: cover
+
+      &:hover
+        transform: rotate(-360deg)
+
   #site-title,
   #site-subtitle,
   #scroll-down .scroll-down-effects

@@ -35,6 +35,8 @@ header#page-header(class=isHomeClass style=bg_img)
       include ./post-info.pug
     else if is_home() 
       #site-info
+        .header-img
+          img(src=url_for(theme.siteicon.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="site icon")
         h1#site-title=site_title
         if theme.subtitle.enable
           - var loadSubJs = true
