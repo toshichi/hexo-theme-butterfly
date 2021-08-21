@@ -79,8 +79,11 @@ if hexo-config('enter_transitions')
           animation: sidebarItem (i / 5)s
 
 .card-announcement-animation
-  // color: #FF0000
+  color: #FF0000
   animation: announ_animation .8s linear infinite
+
+.heartbeat-animation
+  animation: heartbeat_animation 1.33s ease-in-out infinite;
 
 .scroll-down-effects
   animation: scroll-down-effect 1.5s infinite
@@ -212,6 +215,24 @@ if hexo-config('avatar.effect') == true
 
   50%
     transform: scale(1.2)
+
+@keyframes heartbeat_animation {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  10%, 30% {
+    transform: scale(.9);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
 
 @keyframes sidebarItem
   0%
